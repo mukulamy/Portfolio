@@ -196,10 +196,58 @@ body.dark h1, body.dark .support a {color: #fff;}
   .timeline-section {
     flex-direction: column;
   }
+.checkbox-label{
+  margin-top: 20px;
+}
+
+div.desc.paragraph{
+  border-radius: 20px;
+}
 
   .timeline-container {
     width: 100%;
   }
+  .fade-in {
+    /* You can override the styles or remove them altogether for mobile screens */
+    opacity: 1; /* For example, make the element fully visible on mobile */
+    transform: none; /* Remove the transform effect on mobile */
+    transition: none; /* Remove the transition effect on mobile */
+  }
+
+  /* You can also override the active class styles if needed */
+  .fade-in.active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .about-details{
+    margin: 0px!important;
+    padding: 0px;
+  }
+  .left>img{
+    border-top-right-radius: 35px!important;
+    border-bottom-left-radius: 0px!important;
+    margin-left: 51px;
+  }
+  .about .left img {
+    height: 350px;
+    width: 100%!important;
+    text-align: center;
+    align-items: center!important;
+    justify-content: center!important;
+}
+.about .about-details .right{
+  text-align: center;
+}
+.timeline-container.right{
+  margin-top: 60px;
+}
+.go-to-top{
+  margin-right: 30px;
+}
+.m{
+  font-size: 24px!important;
+}
 }
 
 /* ================ The Timeline ================ */
@@ -371,9 +419,12 @@ body.dark h1, body.dark .support a {color: #fff;}
   margin: 1em 0 0 0.75em;
 }
 
+
+
 /* ================ Timeline Media Queries ================ */
 
 @media screen and (max-width: 660px) {
+
 
   .timeline {
     width: 100%;
@@ -826,16 +877,7 @@ section .button button:hover{
     width:calc(100% / 2 - 20px);
     margin:10px 0;
   }
-  .fade-in {
-    all: none;
-  }
   
-  .fade-in.active {
-    all: none;
-  }
-  .m{
-    font-size: 40px;
-  }
 }
 /* My Services CSS */
 .services .boxes{
@@ -987,7 +1029,7 @@ footer .text span a:hover{
      position:fixed;
      left:-100%;
      top:0;
-     background:var(--primary-color);
+     background-color: black;
      height:100vh;
      max-width: 400px;
      width:100%;
