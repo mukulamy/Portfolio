@@ -50,17 +50,21 @@ sections.forEach((section) => {
 
 
 
-$(window).scroll(function() {
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('Mobile') !== -1);
+}
 
-  if ($(this).scrollTop()>0)
-   {
-      $('.navbar').fadeOut();
-   }
-  else
-   {
-    $('.navbar').fadeIn();
-   }
-});
+// Check if the device is not a mobile device
+if (!isMobileDevice()) {
+  // Your code that should only run on non-mobile devices
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > 0) {
+          $('.navbar').fadeOut();
+      } else {
+          $('.navbar').fadeIn();
+      }
+  });
+}
 
 let val;
 window.onload = function () {
