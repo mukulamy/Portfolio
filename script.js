@@ -1,3 +1,21 @@
+$(function(){
+
+  //Scroll event
+  $(window).scroll(function(){
+    var scrolled = $(window).scrollTop();
+    if (scrolled > 200) $('.go-to-top').fadeIn('slow');
+    if (scrolled < 200) $('.go-to-top').fadeOut('slow');
+  });
+  
+  //Click event
+  $('.go-to-top').click(function () {
+    $("html, body").animate({ scrollTop: "0" },  500);
+  });
+
+});
+
+
+// Delete above for go to top button 
 
 const checkbox = document.getElementById("checkbox")
 checkbox.addEventListener("change", () => {
