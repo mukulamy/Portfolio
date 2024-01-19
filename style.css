@@ -1,6 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Image carasoul starts here  */
+#slider {
+  width: 550px;
+  height: 300px;
+  /* position: relative; */
+/* background-color: black; */
+  border: 3px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  cursor: pointer;
+   
+}
+
+
+
+
+#slider>img{
+  object-fit: cover;
+}
+
+.imageSlide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slide-out {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    right: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+@keyframes rotate-in {
+  0% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.2) translateZ(0);
+  }
+
+  100% {
+    transform: scale(1) translateZ(0);
+  }
+}
+
+@keyframes bounce-in {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes spin-in {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInAndOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-diagonal {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flip-in {
+  0% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Image caraousl ends here  */
+
 li:hover{
   
     text-shadow:0px 0px 30px #000000;
@@ -14,6 +162,7 @@ li:hover{
 
 
 * {box-sizing: border-box;}
+
 
 
 .go-to-top {
@@ -167,6 +316,7 @@ body.dark h1, body.dark .support a {color: #fff;}
     /* Add some spacing between stacked elements */
   }
 
+ 
   
 }
 
@@ -550,19 +700,19 @@ div.desc.paragraph{
   padding: 0;
 }
 .paragraph{
-  margin-right: 40px;
-  color: #067a75;
+  margin-right: 5%;
+  color: var(--black-color);
 }
 :root{
-    --primary-color:#067a75;
-    --black-color:#067a75;
-    --white-color:#fff;
-    --hover-color:#091618;
+  --primary-color:#067a75;
+  --black-color:#067a75;
+  --white-color:#fff;
+  --hover-color:#091618;
 
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-color: white;
+  background-color: #FFF5EE;
 }
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -652,7 +802,7 @@ nav.sticky .media-icons a{
 nav .menu-btn,
 .navbar .menu .cancel-btn{
   position:absolute;
-  color:var(--white-color);
+  color:white;
   right:30px;
   top:20px;
   font-size: 20px;
@@ -767,8 +917,9 @@ section .title span::after{
   display:flex;
   justify-content:space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 35px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 }
 .about .about-details .left{
   width:45%;
@@ -789,6 +940,10 @@ section .topic{
   font-size:25px;
   font-weight: 500;
   margin-bottom: 10px;
+  
+}
+.topic{
+  text-align: center;
 }
 .about-details .right p{
   padding-top: 10px;
@@ -1044,7 +1199,7 @@ footer .text span a:hover{
    nav .navbar .menu a{
      font-size:23px;
      display:block;
-     color:var(--white-color);
+     color:white;
      margin:10px 0;
    }
    nav.sticky .menu a:hover{
@@ -1098,6 +1253,27 @@ footer .text span a:hover{
     font-size: 33px;
   }
 
+  #slider {
+    width: 98%;
+    height: 29%;
+    
+    /* position: relative; */ 
+    border: 1px black solid; 
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 11%;
+    right: 1%;
+    box-shadow:none;
+    cursor: pointer;
+}
+#FPV{
+  position: absolute;
+  top: 50%;
+}
+  .paragraph{
+    margin:0;
+  }
   .skill-details .boxes .per{
     font-size: 50px;
     color:var(--primary-color);
@@ -1211,7 +1387,7 @@ a {
   left: 0;
   right: 0;
   z-index: -1;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* new style */
@@ -1224,6 +1400,7 @@ a {
 .orange .progress {
   position: relative;
   border-radius: 50%;
+  margin: auto;
 }
 .green .progress,
 .red .progress,
@@ -1327,10 +1504,7 @@ a {
 .green .progress .inner .percent,
 .red .progress .inner .percent,
 .orange .progress .inner .percent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
+  
   height: 50%;
   text-align: center;
 }
@@ -1416,3 +1590,6 @@ a {
     transform: rotate(360deg);
   }
 }
+
+
+
