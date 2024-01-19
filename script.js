@@ -1,3 +1,7 @@
+
+
+
+
 $(function(){
 
   //Scroll event
@@ -20,7 +24,18 @@ $(function(){
 const checkbox = document.getElementById("checkbox")
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark")
-})
+  if (checkbox.checked) {
+    document.documentElement.style.setProperty("--primary-color", "#ff5733");
+    document.documentElement.style.setProperty("--black-color", "#ff5733");
+    document.documentElement.style.setProperty("--white-color", "#000");
+    document.documentElement.style.setProperty("--hover-color", "#b82e00");
+  } else {
+    document.documentElement.style.setProperty("--primary-color", "#067a75");
+    document.documentElement.style.setProperty("--black-color", "#067a75");
+    document.documentElement.style.setProperty("--white-color", "#fff");
+    document.documentElement.style.setProperty("--hover-color", "#091618");
+  }
+});
 
 // Delete above for dark and light mode toggle
 
@@ -55,13 +70,13 @@ function isMobileDevice() {
 }
 
 // Check if the device is not a mobile device
-if (!isMobileDevice()) {
+if (1) {
   // Your code that should only run on non-mobile devices
   $(window).scroll(function() {
       if ($(this).scrollTop() > 0) {
-          $('.navbar').fadeOut();
+          $('.navbar, .menu-btn').fadeOut();
       } else {
-          $('.navbar').fadeIn();
+          $('.navbar, .menu-btn').fadeIn();
       }
   });
 }
