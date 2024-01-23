@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/Images/">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sit next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  position: relative;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+}
+
+img:hover{
+
+    -moz-box-shadow: 0px 0px 7px #1e1e1e; 
+    -webkit-box-shadow: 0px 0px 5px #1e1e1e; 
+    box-shadow: 0px 0px 5px #1e1e1e;
+    -webkit-transition: box-shadow 0.3s ease-in-out 0s;
+    -moz-transition: box-shadow 0.3s ease-in-out 0s;
+    -o-transition: box-shadow 0.3s ease-in-out 0s;
+    -ms-transition: box-shadow 0.3s ease-in-out 0s;
+    transition: box-shadow 0.3s ease-in-out 0s;
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Lightbox */
+.lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        z-index: 99;
+        opacity: 0; /* Start with opacity 0 */
+        transition: opacity 0.5s; /* Add a transition effect */
+      }
+
+      /* Add animation for lightbox image */
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Start with opacity 0 */
+        transition: opacity 0.5s; /* Add a transition effect */
+      }
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+   z-index: 99;
+}
+
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+   z-index: 99;
+}
+
+.lightbox .prev {
+  left: 20px;
+}
+
+.lightbox .next {
+  right: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Image Gallery</h1>
+  <p>Open any image to know the story associated with it; P</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img loading="lazy" src="IMG (2).jpg" />
+    <img loading="lazy" src="IMG (1).jpg" />
+    <img loading="lazy" src="IMG (3).jpg" />
+    <img loading="lazy" src="IMG (4).jpg" />
+    <img loading="lazy" src="IMG (5).jpg" />
+    <img loading="lazy" src="IMG (6).jpg" />
+    <img loading="lazy" src="IMG (7).jpg" />
+    <img loading="lazy" src="IMG (8).jpg" />
+    <img loading="lazy" src="IMG (9).jpg" />
+    <img loading="lazy" src="IMG (10).jpg" />
+    <img loading="lazy" src="IMG (11).jpg" />
+    <img loading="lazy" src="IMG (12).jpg" />
+    <img loading="lazy" src="IMG (13).jpg" />
+    <img loading="lazy" src="IMG (14).jpg" />
+    <img loading="lazy" src="IMG (15).jpg" />
+    <img loading="lazy" src="IMG (16).jpg" /><img loading="lazy" src="IMG (17).jpg" /><img loading="lazy" src="IMG (18).jpg" />
+    <img loading="lazy" src="IMG (19).jpg" />
+    <img loading="lazy" src="IMG (20).jpg" />
+    <img loading="lazy" src="IMG (21).jpg" />
+    <img loading="lazy" src="IMG (22).jpg" />
+    <img loading="lazy" src="IMG (23).jpg" />
+    <img loading="lazy" src="IMG (24).jpg" />
+    <img loading="lazy" src="IMG (25).jpg" />
+    <img loading="lazy" src="IMG (26).jpg" />
+    <img loading="lazy" src="IMG (27).jpg" />
+    <img loading="lazy" src="IMG (28).jpg" />
+    <img loading="lazy" src="IMG (29).jpg" />
+    <img loading="lazy" src="IMG (30).jpg" />
+    <img loading="lazy" src="IMG (60).jpg" />
+    <img loading="lazy" src="IMG (87).jpg" />
+    <img loading="lazy" src="IMG (119).jpg" />
+    <img loading="lazy" src="IMG (36).jpg" />
+<img loading="lazy" src="IMG (37).jpg" />
+<img loading="lazy" src="IMG (31).jpg" />
+<img loading="lazy" src="IMG (32).jpg" />
+  </div>
+  
+  <div class="column">
+
+
+<img loading="lazy" src="IMG (33).jpg" /><img loading="lazy" src="IMG (34).jpg" />
+<img loading="lazy" src="IMG (35).jpg" />
+
+<img loading="lazy" src="IMG (38).jpg" />
+<img loading="lazy" src="IMG (39).jpg" />
+<img loading="lazy" src="IMG (40).jpg" /><img loading="lazy" src="IMG (41).jpg" />
+<img loading="lazy" src="IMG (42).jpg" />
+<img loading="lazy" src="IMG (43).jpg" />
+<img loading="lazy" src="IMG (44).jpg" />
+<img loading="lazy" src="IMG (45).jpg" />
+<img loading="lazy" src="IMG (46).jpg" />
+<img loading="lazy" src="IMG (47).jpg" />
+<img loading="lazy" src="IMG (48).jpg" />
+<img loading="lazy" src="IMG (49).jpg" />
+<img loading="lazy" src="IMG (50).jpg" />
+<img loading="lazy" src="IMG (51).jpg" />
+<img loading="lazy" src="IMG (52).jpg" />
+<img loading="lazy" src="IMG (53).jpg" />
+<img loading="lazy" src="IMG (54).jpg" />
+<img loading="lazy" src="IMG (55).jpg" />
+<img loading="lazy" src="IMG (56).jpg" />
+<img loading="lazy" src="IMG (57).jpg" />
+<img loading="lazy" src="IMG (58).jpg" />
+<img loading="lazy" src="IMG (59).jpg" />
+
+  </div> 
+   
+  <div class="column">
+    <img loading="lazy" src="IMG (61).jpg" />
+    <img loading="lazy" src="IMG (62).jpg" />
+    <img loading="lazy" src="IMG (63).jpg" />
+    <img loading="lazy" src="IMG (64).jpg" />
+    <img loading="lazy" src="IMG (65).jpg" />
+    <img loading="lazy" src="IMG (66).jpg" />
+    <img loading="lazy" src="IMG (67).jpg" />
+    <img loading="lazy" src="IMG (68).jpg" />
+    <img loading="lazy" src="IMG (69).jpg" />
+    <img loading="lazy" src="IMG (70).jpg" /><img loading="lazy" src="IMG (71).jpg" />
+    <img loading="lazy" src="IMG (72).jpg" />
+    <img loading="lazy" src="IMG (73).jpg" />
+    <img loading="lazy" src="IMG (74).jpg" />
+    <img loading="lazy" src="IMG (75).jpg" />
+    <img loading="lazy" src="IMG (76).jpg" />
+    <img loading="lazy" src="IMG (77).jpg" />
+    <img loading="lazy" src="IMG (78).jpg" />
+    <img loading="lazy" src="IMG (79).jpg" />
+    <img loading="lazy" src="IMG (80).jpg" />
+    <img loading="lazy" src="IMG (81).jpg" />
+    <img loading="lazy" src="IMG (82).jpg" />
+    <img loading="lazy" src="IMG (83).jpg" />
+    <img loading="lazy" src="IMG (84).jpg" />
+    <img loading="lazy" src="IMG (85).jpg" />
+    <img loading="lazy" src="IMG (86).jpg" />
+   
+  
+  </div>
+  
+  <div class="column">
+   
+    <img loading="lazy" src="IMG (88).jpg" />
+    <img loading="lazy" src="IMG (89).jpg" />
+    <img loading="lazy" src="IMG (90).jpg" />
+    <img loading="lazy" src="IMG (91).jpg" />
+<img loading="lazy" src="IMG (92).jpg" />
+<img loading="lazy" src="IMG (93).jpg" />
+<img loading="lazy" src="IMG (94).jpg" />
+<img loading="lazy" src="IMG (95).jpg" />
+<img loading="lazy" src="IMG (96).jpg" />
+<img loading="lazy" src="IMG (97).jpg" />
+<img loading="lazy" src="IMG (98).jpg" />
+<img loading="lazy" src="IMG (99).jpg" />
+<img loading="lazy" src="IMG (100).jpg" />
+<img loading="lazy" src="IMG (101).jpg" />
+<img loading="lazy" src="IMG (102).jpg" />
+<img loading="lazy" src="IMG (103).jpg" />
+<img loading="lazy" src="IMG (104).jpg" />
+<img loading="lazy" src="IMG (105).jpg" />
+<img loading="lazy" src="IMG (106).jpg" />
+<img loading="lazy" src="IMG (107).jpg" />
+<img loading="lazy" src="IMG (108).jpg" />
+<img loading="lazy" src="IMG (109).jpg" />
+<img loading="lazy" src="IMG (110).jpg" />
+<img loading="lazy" src="IMG (111).jpg" />
+<img loading="lazy" src="IMG (112).jpg" />
+<img loading="lazy" src="IMG (113).jpg" />
+<img loading="lazy" src="IMG (114).jpg" />
+<img loading="lazy" src="IMG (115).jpg" />
+<img loading="lazy" src="IMG (116).jpg" />
+<img loading="lazy" src="IMG (117).jpg" />
+<img loading="lazy" src="IMG (118).jpg" />
+
+  </div>
+</div>
+
+<!-- Lightbox Container -->
+<div class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="prev" onclick="navigate(-1)">&#9665;</span>
+  <span class="next" onclick="navigate(1)">&#9655;</span>
+  <img loading="lazy" id="lightboxImage">
+</div>
+
+<script>
+let currentIndex = 0;
+let touchStartX = 0;
+
+const images = document.querySelectorAll(".column img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+
+// Open lightbox with clicked image
+images.forEach((image, index) => {
+  image.addEventListener("click", () => {
+    currentIndex = index;
+    openLightbox(index);
+  });
+});
+
+function openLightbox(index) {
+  lightbox.style.display = "block";
+  lightbox.style.opacity = 1; // Fade in the lightbox
+  lightboxImage.src = images[index].src;
+  lightboxImage.style.opacity = 1; // Fade in the image
+  document.addEventListener("keydown", handleKeyPress);
+
+  // Touch events
+  lightbox.addEventListener("touchstart", handleTouchStart);
+  lightbox.addEventListener("touchmove", handleTouchMove);
+}
+
+function closeLightbox() {
+  lightbox.style.opacity = 0; // Fade out the image
+  lightboxImage.style.opacity = 0; // Fade out the lightbox
+
+  // Use setTimeout to hide the lightbox after the fade-out animation
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 500);
+  document.removeEventListener("keydown", handleKeyPress);
+
+  // Remove touch event listeners
+  lightbox.removeEventListener("touchstart", handleTouchStart);
+  lightbox.removeEventListener("touchmove", handleTouchMove);
+}
+
+function navigate(offset) {
+  currentIndex += offset;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+  lightboxImage.style.opacity = 0; // Fade out the image
+
+  // Use setTimeout to change the image after the fade-out animation
+  setTimeout(() => {
+    lightboxImage.src = images[currentIndex].src;
+    lightboxImage.style.opacity = 1; // Fade in the new image
+  }, 500);
+}
+
+function handleKeyPress(event) {
+  if (event.key === "ArrowRight") {
+    navigate(1); // Right key for next
+  } else if (event.key === "ArrowLeft") {
+    navigate(-1); // Left key for previous
+  } else if (event.key === "Escape") {
+    closeLightbox(); // ESC key to close
+  }
+}
+
+// Touch event handlers
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  const touchEndX = event.touches[0].clientX;
+  const touchDistance = touchEndX - touchStartX;
+
+  // Adjust this threshold as needed based on your design
+  const swipeThreshold = 50;
+
+  if (touchDistance > swipeThreshold) {
+    navigate(-1); // Swipe left for previous
+  } else if (touchDistance < -swipeThreshold) {
+    navigate(1); // Swipe right for next
+  }
+}
+
+</script>
+
+</body>
+</html>
