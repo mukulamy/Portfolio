@@ -21,7 +21,6 @@
 
 
 
-
 #slider>img{
   object-fit: cover;
 }
@@ -236,13 +235,6 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 
-
-
-
-
-
-
-
 /*  Support me if you like it */
 .support {
 	position: absolute;
@@ -304,6 +296,7 @@ body.dark h1, body.dark .support a {color: #fff;}
   .timeline-container.left {
     margin-right: 10px;
   }
+
 }
 
 /* Media query for screens smaller than a certain width (adjust the width as needed) */
@@ -315,9 +308,7 @@ body.dark h1, body.dark .support a {color: #fff;}
     margin-bottom: 10px;
     /* Add some spacing between stacked elements */
   }
-
  
-  
 }
 
 
@@ -1055,13 +1046,13 @@ section .button button:hover{
   color:var(--white-color);
 }
 .services .boxes .box .icon{
-  padding:1em;
+  padding:1rem;
   height:50px;
   width:50px;
   background-color: #091618;
   border-radius: 50%;
   text-align: center;
-  line-height: 50px;
+  /* line-height: 50px; */
   font-size: 18px;
   color:var(--white-color);
   margin:0 auto 10px auto;
