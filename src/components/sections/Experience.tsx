@@ -5,10 +5,10 @@ const experiences = [
   {
     id: 1,
     company: "Exicom",
-    initials: "EX",
+    logo: "/Exicom.jpg",
     logoColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
     role: "Software Engineer",
-    from: "Jan 2024",
+    from: "Feb 2026",
     to: "Present",
     location: "Gurugram, India",
     color: "from-cyan-500/20 to-blue-500/10",
@@ -27,12 +27,12 @@ const experiences = [
   {
     id: 2,
     company: "Apeejay Education",
-    initials: "AE",
+    logo: "/Apeejay",
     logoColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
     role: "Junior Software Developer",
-    from: "Jun 2022",
-    to: "Dec 2023",
-    location: "New Delhi, India",
+    from: "July 2022",
+    to: "Feb 2026",
+    location: "Gurugram, Haryana",
     color: "from-violet-500/20 to-purple-500/10",
     accentBorder: "border-violet-500/30",
     highlights: [
@@ -96,8 +96,8 @@ export function Experience() {
                   {/* Logo + Title block */}
                   <div className="flex items-start gap-4">
                     {/* Company logo badge */}
-                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center text-sm font-bold font-mono flex-shrink-0 ${exp.logoColor}`}>
-                      {exp.initials}
+                    <div className={`w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 ${exp.logoColor}`}>
+                      <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-cover" />
                     </div>
 
                     <div>
