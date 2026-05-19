@@ -22,6 +22,21 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "erp",
+    title: "ERP & LMS Systems",
+    tags: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
+    problem: "Disparate legacy systems for student management, operations, and learning modules caused data silos and operational friction.",
+    contribution: "Architected scalable, role-based frontend systems integrated with heavily optimized backend APIs.",
+    impact: "Unified operations into cohesive platforms, improving data visibility and reducing administrative overhead.",
+    icon: <Database className="w-6 h-6" />,
+    accentColor: "from-emerald-500/20 to-teal-500/10",
+    images: [
+      { label: "ERP dashboard — operations overview" },
+      { label: "LMS course management" },
+      { label: "Student records & reporting" },
+    ],
+  },
+    {
     id: "plc",
     title: "PLC Logic Builder",
     tags: ["React", "TypeScript", "Canvas API", "REST APIs"],
@@ -49,21 +64,6 @@ const projects: Project[] = [
       { label: "Board view — task lifecycle" },
       { label: "Role-based access control panel" },
       { label: "Analytics dashboard" },
-    ],
-  },
-  {
-    id: "erp",
-    title: "ERP & LMS Systems",
-    tags: ["React", "TypeScript", "Node.js", "SQL Server"],
-    problem: "Disparate legacy systems for student management, operations, and learning modules caused data silos and operational friction.",
-    contribution: "Architected scalable, role-based frontend systems integrated with heavily optimized backend APIs.",
-    impact: "Unified operations into cohesive platforms, improving data visibility and reducing administrative overhead.",
-    icon: <Database className="w-6 h-6" />,
-    accentColor: "from-emerald-500/20 to-teal-500/10",
-    images: [
-      { label: "ERP dashboard — operations overview" },
-      { label: "LMS course management" },
-      { label: "Student records & reporting" },
     ],
   },
 ];

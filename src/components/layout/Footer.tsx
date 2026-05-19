@@ -14,10 +14,10 @@ export function Footer() {
             &copy; {year} Mukul Yadav. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <a href="https://github.com/mukulamy" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <a href="https://linkedin.com/in/mukulji" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               LinkedIn
             </a>
           </div>
