@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Mail, Database, Layout, User } from "lucide-react";
+import { ArrowRight, Download, Mail, Database, Layout } from "lucide-react";
+const resumePdf = "/Mukul_software_Web_Dev.pdf";
+const profileImage = "/Mukul_Yadav_Web_Software.JPG";
 
 export function Hero() {
   const scrollToContact = () =>
@@ -86,15 +88,17 @@ export function Hero() {
                 View Projects
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                data-testid="button-resume"
-                className="h-11 px-5 rounded-lg font-medium border-border hover:bg-secondary/60"
-              >
-                <Download className="mr-2 w-4 h-4" />
-                Resume
-              </Button>
+              <a href={resumePdf} download="Mukul_Software_Web_Dev.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  data-testid="button-resume"
+                  className="h-11 px-5 rounded-lg font-medium border-border hover:bg-secondary/60"
+                >
+                  <Download className="mr-2 w-4 h-4" />
+                  Resume
+                </Button>
+              </a>
               <Button
                 onClick={scrollToContact}
                 variant="ghost"
@@ -130,16 +134,12 @@ export function Hero() {
                 {/* Gradient bg inside placeholder */}
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-muted/40 to-secondary/60" />
 
-                {/* Placeholder UI */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="w-20 h-20 rounded-full bg-secondary border border-border/60 flex items-center justify-center shadow-inner">
-                    <User className="w-10 h-10 text-muted-foreground/40" />
-                  </div>
-                  <div className="text-center px-6">
-                    <p className="text-xs font-mono text-muted-foreground/50">your photo here</p>
-                    <p className="text-[10px] text-muted-foreground/30 mt-1">replace &lt;img&gt; src with your image path</p>
-                  </div>
-                </div>
+                <img
+                  src={profileImage}
+                  alt="Mukul Yadav"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
 
                 {/* Corner accent brackets */}
                 <div className="absolute top-4 left-4 w-7 h-7 border-t-2 border-l-2 border-primary/50 rounded-tl pointer-events-none" />
