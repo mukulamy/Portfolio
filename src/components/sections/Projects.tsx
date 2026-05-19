@@ -39,7 +39,7 @@ const projects: Project[] = [
     {
     id: "plc",
     title: "PLC Logic Builder",
-    tags: ["React", "TypeScript", "Canvas API", "REST APIs"],
+    tags: ["JavaScript", "STM32", "Canvas API", "REST APIs"],
     problem: "Controller systems required complex manual configuration that was error-prone and unapproachable for non-technical operators.",
     contribution: "Built an interactive visual programming interface using drag-and-drop logic blocks on a workflow canvas.",
     impact: "Abstracted complex controller logic into intuitive visual workflows, improving configuration speed and accuracy.",
