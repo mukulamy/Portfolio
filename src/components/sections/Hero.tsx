@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail, Database, Layout } from "lucide-react";
-const resumePdf = "/Mukul_software_Web_Dev.pdf";
+const resumePdf = "/Mukul_Software_Web_Dev.pdf";
 const profileImage = "/Mukul_Yadav_Web_Software.JPG";
 
 export function Hero() {
@@ -88,7 +88,7 @@ export function Hero() {
                 View Projects
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <a href={resumePdf} download="Mukul_Software_Web_Dev.pdf">
+              <a href={resumePdf} download target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
                   size="lg"
@@ -160,7 +160,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-foreground whitespace-nowrap">Interactive UIs</div>
-                  <div className="text-[10px] text-muted-foreground">Canvas & Workflows</div>
+                  <div className="text-[10px] text-muted-foreground">React & Workflows</div>
                 </div>
               </motion.div>
 
@@ -175,7 +175,7 @@ export function Hero() {
                   <Database size={17} />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-foreground whitespace-nowrap">Data Systems</div>
+                  <div className="text-xs font-bold text-foreground whitespace-nowrap">APIs & Data</div>
                   <div className="text-[10px] text-muted-foreground">SQL & Optimization</div>
                 </div>
               </motion.div>

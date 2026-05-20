@@ -12,39 +12,75 @@ export function Certifications() {
           transition={{ duration: 0.6 }}
           className="mb-10"
         >
-          <p className="text-xs font-mono text-primary uppercase tracking-[0.2em] mb-3">Credentials</p>
+          <p className="text-xs font-mono text-primary uppercase tracking-[0.2em] mb-3">
+            Credentials
+          </p>
+
           <div className="flex items-end gap-4">
-            <h2 className="text-3xl font-display font-bold text-foreground">Education & Certifications</h2>
+            <h2 className="text-3xl font-display font-bold text-foreground">
+              Education & Certifications
+            </h2>
+
             <div className="h-px bg-gradient-to-r from-border to-transparent flex-1 mb-2" />
           </div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="rounded-xl border border-border/60 bg-card p-5">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="p-2 rounded-lg bg-secondary/10">
+          {/* Education Card */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.2 }}
+            className="rounded-2xl border border-border/60 bg-card/80 backdrop-blur-sm p-6 shadow-sm hover:shadow-lg transition-all"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-xl bg-primary/10">
                 <Book className="w-5 h-5 text-primary" />
               </div>
+
               <div>
-                <div className="text-base font-semibold">Master of Computer Application</div>
-                <div className="text-sm text-muted-foreground">Highest degree</div>
+                <div className="text-lg font-semibold text-foreground">
+                  Master of Computer Applications
+                </div>
+
+                <div className="text-sm text-muted-foreground mt-1">
+                  MCA • Gurugram University
+                </div>
+
+                <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
+                  Focused on software development, scalable systems, and modern
+                  web application engineering.
+                </p>
               </div>
             </div>
-            <div className="text-sm text-muted-foreground">Specialization in software development and systems engineering.</div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-xl border border-border/60 bg-card p-5">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="p-2 rounded-lg bg-secondary/10">
+          {/* Certification Card */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.2 }}
+            className="rounded-2xl border border-border/60 bg-card/80 backdrop-blur-sm p-6 shadow-sm hover:shadow-lg transition-all"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-xl bg-amber-500/10">
                 <Award className="w-5 h-5 text-amber-500" />
               </div>
+
               <div>
-                <div className="text-base font-semibold">Google Cloud Certified</div>
-                <div className="text-sm text-muted-foreground">Professional certification</div>
+                <div className="text-lg font-semibold text-foreground">
+                  Google Cloud Certified
+                </div>
+
+                <div className="text-sm text-muted-foreground mt-1">
+                  Cloud Digital Leader
+                </div>
+
+                <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
+                  Certified in Google Cloud technologies, cloud fundamentals,
+                  and modern infrastructure best practices.
+                </p>
               </div>
             </div>
-            <div className="text-sm text-muted-foreground">Certified in Google Cloud technologies and best practices.</div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

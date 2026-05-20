@@ -88,7 +88,7 @@ export function About() {
 
             {/* Tech pills */}
             <div className="flex flex-wrap gap-2 mt-8">
-              {["React", "TypeScript", "Node.js", "SQL Server", "REST APIs", "Canvas API"].map((t) => (
+              {["React", "TypeScript", "Node.js", "SQL Server", "REST APIs"].map((t) => (
                 <span
                   key={t}
                   className="px-3 py-1 text-xs font-mono rounded-full border border-border/60 bg-secondary/50 text-muted-foreground hover:border-primary/40 hover:text-foreground transition-colors"

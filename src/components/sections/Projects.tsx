@@ -23,32 +23,35 @@ interface Project {
 const projects: Project[] = [
   {
     id: "erp",
-    title: "ERP & LMS Systems",
+    title: "ERP & Learning Platforms",
     tags: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
     problem: "Disparate legacy systems for student management, operations, and learning modules caused data silos and operational friction.",
     contribution: "Architected scalable, role-based frontend systems integrated with heavily optimized backend APIs.",
-    impact: "Unified operations into cohesive platforms, improving data visibility and reducing administrative overhead.",
+    impact: "Centralized academic and operational workflows into unified platforms used across multiple departments.",
     icon: <Database className="w-6 h-6" />,
     accentColor: "from-emerald-500/20 to-teal-500/10",
     images: [
-      { label: "ERP dashboard — operations overview" },
-      { label: "LMS course management" },
-      { label: "Student records & reporting" },
+      { src: "/Blur_erp1.png", label: "ERP dashboard — operations overview" },
+      { src: "/Blur_erp2.png", label: "LMS course management" },
+      { src: "/Blur_erp3.png", label: "Student records & reporting" },
+      { src: "/Blur_erp4.png", label: "Analytics & reporting" },
+      { src: "/Blur_erp5.png", label: "Course enrollment flow" },
+      { src: "/Blur_erp6.png", label: "Admin console & settings" },
     ],
   },
     {
     id: "plc",
     title: "PLC Logic Builder",
-    tags: ["JavaScript", "STM32", "Canvas API", "REST APIs"],
+    tags: ["JavaScript", "Canvas API", "REST APIs"],
     problem: "Controller systems required complex manual configuration that was error-prone and unapproachable for non-technical operators.",
     contribution: "Built an interactive visual programming interface using drag-and-drop logic blocks on a workflow canvas.",
     impact: "Abstracted complex controller logic into intuitive visual workflows, improving configuration speed and accuracy.",
     icon: <Layers className="w-6 h-6" />,
     accentColor: "from-cyan-500/20 to-blue-500/10",
     images: [
-      { label: "Canvas overview — drag-and-drop logic blocks" },
-      { label: "Block configuration panel" },
-      { label: "Live simulation mode" },
+      { src: "/plc1.png", label: "Canvas overview — drag-and-drop logic blocks" },
+      { src: "/plc2.png", label: "Block configuration panel" },
+      { src: "/plc3.png", label: "Live simulation mode" },
     ],
   },
   {
@@ -56,8 +59,8 @@ const projects: Project[] = [
     title: "Task Management System",
     tags: ["React", "Node.js", "SQL Server", "REST APIs"],
     problem: "Teams lacked a centralized system for role-based task routing and real-time lifecycle tracking.",
-    contribution: "Developed a Jira-style workflow engine with custom state machines, role-based access control, and real-time UI updates.",
-    impact: "Streamlined operational workflows and established clear accountability and tracking across the organization.",
+    contribution: "Developed a Jira-style task management platform with role-based workflows, lifecycle tracking, and real-time UI updates.",
+    impact: "Reduced redundant API calls by ~40% through optimized frontend state handling.",
     icon: <GitBranch className="w-6 h-6" />,
     accentColor: "from-violet-500/20 to-purple-500/10",
     images: [
@@ -85,7 +88,7 @@ function ProjectImageGallery({
     <div className="w-full group">
       {/* Main image frame */}
       <div
-        className="relative aspect-[16/10] rounded-xl overflow-hidden border border-border bg-card shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-500 cursor-pointer"
+        className={`relative ${project.id === "erp" ? "rounded-xl overflow-hidden border border-border bg-card shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-500 cursor-pointer flex items-center justify-center p-4" : "aspect-[16/10] rounded-xl overflow-hidden border border-border bg-card shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-500 cursor-pointer"}`}
         onClick={() => onOpenLightbox(activeImg)}
       >
         {/* Browser chrome */}
@@ -108,13 +111,13 @@ function ProjectImageGallery({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className={`absolute inset-0 pt-9 bg-gradient-to-br ${project.accentColor} flex flex-col items-center justify-center gap-4`}
+            className={`${project.id === "erp" ? "relative pt-9 bg-gradient-to-br" : "absolute inset-0 pt-9 bg-gradient-to-br"} ${project.accentColor} flex flex-col items-center justify-center gap-4`}
           >
             {project.images[activeImg].src ? (
               <img
                 src={project.images[activeImg].src}
                 alt={project.images[activeImg].label}
-                className="w-full h-full object-cover"
+                className={project.id === "erp" ? "max-w-full h-auto object-contain" : "w-full h-full object-cover"}
               />
             ) : (
               <>
@@ -175,10 +178,18 @@ function ProjectImageGallery({
                 : "border-border/50 hover:border-border opacity-60 hover:opacity-100"
             }`}
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${project.accentColor} flex items-center justify-center gap-1`}>
-              <ImageIcon size={10} className="text-muted-foreground/60" />
-              <span className="text-[9px] font-mono text-muted-foreground/50 hidden sm:block truncate px-1">{img.label.split("—")[0].trim()}</span>
-            </div>
+            {img.src ? (
+              <img
+                src={img.src}
+                alt={img.label}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <div className={`absolute inset-0 bg-gradient-to-br ${project.accentColor} flex items-center justify-center gap-1`}>
+                <ImageIcon size={10} className="text-muted-foreground/60" />
+                <span className="text-[9px] font-mono text-muted-foreground/50 hidden sm:block truncate px-1">{img.label.split("—")[0].trim()}</span>
+              </div>
+            )}
           </button>
         ))}
       </div>

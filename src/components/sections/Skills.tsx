@@ -28,23 +28,24 @@ const skillGroups: SkillGroup[] = [
       { name: "Express", icon: <SiExpress /> },
     ],
   },
-  {
-    category: "Systems",
-    icon: <Cpu className="w-4 h-4" />,
-    color: "text-amber-400",
-    items: [
-      { name: "IIS" },
-      { name: "Windows Server" },
-      { name: "Controller Systems" },
-    ],
-  },
+  // {
+  //   category: "Systems",
+  //   icon: <Cpu className="w-4 h-4" />,
+  //   color: "text-amber-400",
+  //   items: [
+  //     { name: "IIS" },
+  //     // { name: "Windows Server" },
+  //     // { name: "Controller Systems" },
+  //   ],
+  // },
   {
     category: "Database",
     icon: <Database className="w-4 h-4" />,
     color: "text-emerald-400",
     items: [
       { name: "SQL Server" },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MySQL"},
+      { name: "MongoDB", icon: <SiPostgresql /> },
     ],
   },
   {
