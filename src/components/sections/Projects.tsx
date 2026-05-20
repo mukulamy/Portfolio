@@ -31,15 +31,15 @@ const projects: Project[] = [
     icon: <Database className="w-6 h-6" />,
     accentColor: "from-emerald-500/20 to-teal-500/10",
     images: [
-      { src: "/Blur_erp1.png", label: "ERP dashboard — operations overview" },
-      { src: "/Blur_erp2.png", label: "LMS course management" },
-      { src: "/Blur_erp3.png", label: "Student records & reporting" },
-      { src: "/Blur_erp4.png", label: "Analytics & reporting" },
-      { src: "/Blur_erp5.png", label: "Course enrollment flow" },
-      { src: "/Blur_erp6.png", label: "Admin console & settings" },
+      { src: "/Blur_erp1.png", label: "Teacher Dashboard - Oversee Class Stats" },
+      { src: "/Blur_erp2.png", label: "Employee Management - View & Update Records" },
+      { src: "/Blur_erp3.png", label: "Employee Profile - View & Edit Information" },
+      { src: "/Blur_erp4.png", label: "LMS Courses - Create & Manage" },
+      { src: "/Blur_erp5.png", label: "Course Details - Assign and Manage" },
+      { src: "/Blur_erp6.png", label: "Course Content - Edit & Update" },
     ],
   },
-    {
+  {
     id: "plc",
     title: "PLC Logic Builder",
     tags: ["JavaScript", "Canvas API", "REST APIs"],
@@ -49,9 +49,9 @@ const projects: Project[] = [
     icon: <Layers className="w-6 h-6" />,
     accentColor: "from-cyan-500/20 to-blue-500/10",
     images: [
-      { src: "/plc1.png", label: "Canvas overview — drag-and-drop logic blocks" },
-      { src: "/plc2.png", label: "Block configuration panel" },
-      { src: "/plc3.png", label: "Live simulation mode" },
+      { src: "/plc1.png", label: "Visual workflow canvas for controller logic design" },
+      { src: "/plc2.png", label: "Logic block configuration and signal mapping" },
+      { src: "/plc3.png", label: "Real-time controller monitoring and simulation" },
     ],
   },
   {
@@ -64,9 +64,8 @@ const projects: Project[] = [
     icon: <GitBranch className="w-6 h-6" />,
     accentColor: "from-violet-500/20 to-purple-500/10",
     images: [
-      { label: "Board view — task lifecycle" },
-      { label: "Role-based access control panel" },
-      { label: "Analytics dashboard" },
+      { src: "/task1.png", label: "Task dashboard with workflow status tracking" },
+      { src: "/task2.png", label: "Detailed task workflow and department handoff view" },
     ],
   },
 ];
@@ -172,11 +171,10 @@ function ProjectImageGallery({
           <button
             key={i}
             onClick={() => setActiveImg(i)}
-            className={`flex-1 h-10 rounded-md border overflow-hidden transition-all duration-200 relative ${
-              i === activeImg
+            className={`flex-1 h-10 rounded-md border overflow-hidden transition-all duration-200 relative ${i === activeImg
                 ? "border-primary/60 shadow-sm shadow-primary/20"
                 : "border-border/50 hover:border-border opacity-60 hover:opacity-100"
-            }`}
+              }`}
           >
             {img.src ? (
               <img
@@ -254,9 +252,8 @@ export function Projects() {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className={`flex flex-col lg:flex-row gap-10 lg:gap-16 items-start ${
-                i % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col lg:flex-row gap-10 lg:gap-16 items-start ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""
+                }`}
             >
               {/* Image gallery */}
               <div className="w-full lg:w-[58%]">
