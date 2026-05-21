@@ -27,7 +27,7 @@ const experiences = [
   {
     id: 2,
     company: "Apeejay Education",
-    logo: "/Apeejay",
+    logo: "/Apeejay.png",
     logoColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
     role: "Junior Software Developer",
     from: "July 2022",
